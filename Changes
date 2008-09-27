@@ -3,3 +3,5 @@ Revision history for WebService-KuronekoYamato
 0.0.1  Thu Aug 28 00:53:01 2008
        Initial release.
 
+0.0.2  Sun Sep 28 01:42:00 2008
+       CPAN Testでみなビルド失敗するので、テスト内容を見直した

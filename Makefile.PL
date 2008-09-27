@@ -11,6 +11,10 @@ WriteMakefile(
     PREREQ_PM => {
         'Test::More' => 0,
         'version'    => 0,
+        'Encode'             => 0,
+        'WWW::Mechanize'     => 0,
+        'Web::Scraper'       => 0,
+        'YAML::Syck'         => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'WebService-KuronekoYamato-*' },

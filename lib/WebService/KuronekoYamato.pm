@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('0.0.1');
+use version; our $VERSION = qv('0.0.2');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
@@ -90,6 +90,8 @@ sub dump {
 __END__
 
 
+=encoding utf-8
+
 =head1 NAME
 
 WebService::KuronekoYamato - Check Track Shipments (Yamato Transport Co., Ltd. /Japan)
@@ -141,7 +143,7 @@ WebService::KuronekoYamato - クロネコヤマトの荷物お問い合わせシ
 
 =item L<WWW::Mechanize>
 
-=item L<Web::Scrape>
+=item L<Web::Scraper>
 
 =item L<YAML::Syck>
 
