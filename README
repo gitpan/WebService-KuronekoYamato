@@ -1,4 +1,4 @@
-WebService-KuronekoYamato version 0.0.1
+WebService-KuronekoYamato version 0.0.3
 
 [ REPLACE THIS...
 
@@ -39,7 +39,7 @@ None.
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2008, OONO Yoshitaka
+Copyright (C) 2008,2009 OONO Yoshitaka
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

@@ -1,16 +1,27 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         WebService-KuronekoYamato
-version:      0.0.2
-version_from: lib/WebService/KuronekoYamato.pm
-installdirs:  site
+--- #YAML:1.0
+name:               WebService-KuronekoYamato
+version:            0.0.3
+abstract:           Check Track Shipments (Yamato Transport Co., Ltd. /Japan)
+author:
+    - OONO Yoshitaka <aab61120@pop12.odn.ne.jp>
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Encode:                        0
-    Test::More:                    0
-    version:                       0
-    Web::Scraper:                  0
-    WWW::Mechanize:                0
-    YAML::Syck:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.17
+    Encode:          0
+    Test::More:      0
+    version:         0
+    Web::Scraper:    0
+    WWW::Mechanize:  0
+    YAML::Syck:      0
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.54
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
