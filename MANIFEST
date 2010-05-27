@@ -1,19 +1,8 @@
-blib/arch/.exists
-blib/arch/auto/WebService/KuronekoYamato/.exists
-blib/bin/.exists
-blib/lib/auto/WebService/KuronekoYamato/.exists
-blib/lib/WebService/.exists
-blib/lib/WebService/KuronekoYamato.pm
-blib/man1/.exists
-blib/man3/.exists
-blib/man3/WebService::KuronekoYamato.3pm
-blib/script/.exists
 Build.PL
 Changes
 lib/WebService/KuronekoYamato.pm
 Makefile.PL
 MANIFEST			This list of files
 META.yml
-pm_to_blib
 README
 t/00.load.t

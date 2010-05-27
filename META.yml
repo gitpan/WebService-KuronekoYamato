@@ -1,27 +1,26 @@
---- #YAML:1.0
-name:               WebService-KuronekoYamato
-version:            0.0.3
-abstract:           Check Track Shipments (Yamato Transport Co., Ltd. /Japan)
+---
+abstract: 'Check Track Shipments (Yamato Transport Co., Ltd. /Japan)'
 author:
-    - OONO Yoshitaka <aab61120@pop12.odn.ne.jp>
-license:            unknown
-distribution_type:  module
+  - 'OONO Yoshitaka <aab61120@pop12.odn.ne.jp>'
 configure_requires:
-    ExtUtils::MakeMaker:  0
-build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Encode:          0
-    Test::More:      0
-    version:         0
-    Web::Scraper:    0
-    WWW::Mechanize:  0
-    YAML::Syck:      0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.54
+  Module::Build: 0.36
+generated_by: 'Module::Build version 0.3601'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: WebService-KuronekoYamato
+provides:
+  WebService::KuronekoYamato:
+    file: lib/WebService/KuronekoYamato.pm
+    version: v0.0.3
+requires:
+  Encode: 0
+  Test::More: 0
+  WWW::Mechanize: 0
+  Web::Scraper: 0
+  YAML::Syck: 0
+  version: 0
+resources:
+  license: http://dev.perl.org/licenses/
+version: v0.0.3
