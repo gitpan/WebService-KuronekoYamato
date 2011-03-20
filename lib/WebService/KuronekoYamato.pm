@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Carp;
 
-use version; our $VERSION = qv('0.0.3');
+use version; our $VERSION = qv('0.0.5');
 
 # Other recommended modules (uncomment to use):
 #  use IO::Prompt;
@@ -14,7 +14,7 @@ use version; our $VERSION = qv('0.0.3');
 use Encode;
 use WWW::Mechanize;
 use Web::Scraper;
-use YAML::Syck;
+use YAML;
 
 
 # Module implementation here
@@ -22,10 +22,12 @@ use YAML::Syck;
 # コンストラクタ
 sub new {
   my $class = shift;
+  my $self;
   my $mech = WWW::Mechanize->new();
   $mech->agent_alias( 'Windows IE 6' );
   $mech->get('http://toi.kuronekoyamato.co.jp/cgi-bin/tneko?init');
-  my $self = { mech => $mech, };
+  $self->{mech} = $mech;
+  $self->{user_agent} = __PACKAGE__;
   return bless $self, $class;
 }
  
@@ -64,7 +66,7 @@ sub _request {
   # Web::Scraper による解析
   my $s = scraper {
     process '//tr/td[2]/input/../../td[3][contains(. , "-")]/..',
-    'tneko[]' => scraper {
+    'results[]' => scraper {
       process '//td[3]',
       number => 'TEXT',
       process '//td[4]',
@@ -79,15 +81,17 @@ sub _request {
   # 得られた結果をリストで返す
   
   my $res2 = [];
-  foreach my $item ( @{$res->{tneko}} ) {
+  foreach my $item ( @{$res->{results}} ) {
     my $item2 = {};
     foreach my $key ( keys %$item ) {
       $item2->{$key} = encode('utf8', $item->{$key});
     }
+    delete $item2->{date} if $item2->{date} eq q();
+    $item2->{user_agent} = $self->{user_agent};
     push @$res2, $item2;
   }
-  $res->{tneko} = $res2;
-  return $res->{tneko};
+  $res->{results} = $res2;
+  return $res->{results};
 }
  
 sub dump {
@@ -155,7 +159,7 @@ WebService::KuronekoYamato - クロネコヤマトの荷物お問い合わせシ
 
 =item L<Web::Scraper>
 
-=item L<YAML::Syck>
+=item L<YAML>
 
 =back
 

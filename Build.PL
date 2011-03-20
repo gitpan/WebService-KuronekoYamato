@@ -11,9 +11,9 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
         'version'    => 0,
         'Encode'             => 0,
-        'WWW::Mechanize'     => 0,
+        'WWW::Mechanize'     => 1.22,
         'Web::Scraper'       => 0,
-        'YAML::Syck'         => 0,
+        'YAML'               => 0,
     },
     add_to_cleanup      => [ 'WebService-KuronekoYamato-*' ],
 );

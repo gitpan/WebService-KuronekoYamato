@@ -1,4 +1,4 @@
-WebService-KuronekoYamato version 0.0.3
+WebService-KuronekoYamato version 0.0.5
 
 [ REPLACE THIS...
 
@@ -34,12 +34,15 @@ Alternatively, to install with Module::Build, you can use the following commands
 
 DEPENDENCIES
 
-None.
+  Encode
+  WWW::Mechanize
+  Web::Scraper
+  YAML
 
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2008,2009 OONO Yoshitaka
+Copyright (C) 2008-2011 OONO Yoshitaka
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
